@@ -1,0 +1,62 @@
+Traceback (most recent call last):
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 79, in <module>
+    main()
+  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 16, in main
+    click.Group(commands=commands)(prog_name='bench')
+  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/click/core.py", line 722, in __call__
+    return self.main(*args, **kwargs)
+  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/click/core.py", line 697, in main
+    rv = self.invoke(ctx)
+  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/click/core.py", line 1066, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/click/core.py", line 1066, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/click/core.py", line 895, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/click/core.py", line 535, in invoke
+    return callback(*args, **kwargs)
+  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/click/decorators.py", line 17, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/commands/__init__.py", line 24, in _func
+    ret = f(frappe._dict(ctx.obj), *args, **kwargs)
+  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/commands/site.py", line 280, in backup
+    odb = scheduled_backup(ignore_files=not with_files, backup_path_db=backup_path_db, backup_path_files=backup_path_files, backup_path_private_files=backup_path_private_files, force=True)
+  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/backups.py", line 165, in scheduled_backup
+    odb = new_backup(older_than, ignore_files, backup_path_db=backup_path_db, backup_path_files=backup_path_files, force=force)
+  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/backups.py", line 175, in new_backup
+    odb.get_backup(older_than, ignore_files, force=force)
+  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/backups.py", line 48, in get_backup
+    self.set_backup_file_name()
+  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/backups.py", line 63, in set_backup_file_name
+    todays_date = now_datetime().strftime('%Y%m%d_%H%M%S')
+  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/data.py", line 116, in now_datetime
+    dt = convert_utc_to_user_timezone(datetime.datetime.utcnow())
+  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/data.py", line 139, in convert_utc_to_user_timezone
+    return utcnow.astimezone(timezone(get_time_zone()))
+  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/data.py", line 133, in get_time_zone
+    return frappe.cache().get_value("time_zone", _get_time_zone)
+  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 70, in get_value
+    val = generator()
+  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/data.py", line 127, in _get_time_zone
+    return frappe.db.get_system_setting('time_zone') or 'Asia/Kolkata'
+  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/database.py", line 844, in get_system_setting
+    return frappe.cache().get_value("system_settings", _load_system_settings).get(key)
+  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 70, in get_value
+    val = generator()
+  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/database.py", line 843, in _load_system_settings
+    return self.get_singles_dict("System Settings")
+  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/database.py", line 529, in get_singles_dict
+    tabSingles where doctype=%s""", doctype))
+  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+_mysql_exceptions.OperationalError: (2002, 'Can\'t connect to local MySQL server through socket \'/tmp/mysql.sock\' (2 "No such file or directory")')
