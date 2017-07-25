@@ -46,7 +46,8 @@ $(function () {
         this.options = {
             float: false,
             disableResize: true,
-            resizable: { autoHide: true, handles: 'se'}
+            resizable: { autoHide: true, handles: 'se'},
+            autoposition: true
         };
 
         $('.grid-stack').gridstack(this.options);
@@ -476,7 +477,7 @@ $(function () {
             if (widgetPosition === '') {
                 // Add Widgets Function
                 this.grid.addWidget($('<div class="grid-stack-item"><div class="grid-stack-item-content" data-widget="' + widgetsId + '"' + '>' + htmlContent + '</div></div>'),
-                    1, 1, width, height);
+                    0, 0, width, height, true);
 
             } else {
 
