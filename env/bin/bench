@@ -1,0 +1,12 @@
+#!/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/bin/python2.7
+# EASY-INSTALL-ENTRY-SCRIPT: 'bench','console_scripts','bench'
+__requires__ = 'bench'
+import re
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(
+        load_entry_point('bench', 'console_scripts', 'bench')()
+    )

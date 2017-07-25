@@ -1,0 +1,14 @@
+{
+ "db_name": "ERPNext-22", 
+ "db_password": "user123", 
+ "developer_mode": 1, 
+ "encryption_key": "vp8VZBuBDxKkwGN9RCEys6Uv5rUUCg8tRpnniU_4_kk=", 
+ "limits": {
+  "space_usage": {
+   "backup_size": 1.0, 
+   "database_size": 14.3, 
+   "files_size": 0.0, 
+   "total": 15.3
+  }
+ }
+}

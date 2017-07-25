@@ -1,0 +1,1265 @@
+[ERROR] 2017-05-31 23:56:24,671 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 00:08:17,046 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 00:08:17,051 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 00:16:07,741 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 00:16:07,745 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 00:20:08,607 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 00:20:08,609 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 00:24:09,342 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 00:24:09,344 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 00:28:10,219 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 00:28:10,233 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 00:38:43,078 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 00:38:43,085 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 00:42:43,950 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 00:42:43,952 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 00:46:44,750 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 00:46:44,754 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 01:08:00,157 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 01:08:00,165 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 01:16:44,354 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 01:16:44,359 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 01:20:45,119 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 01:20:45,122 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 01:24:45,968 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 01:24:45,972 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 01:28:46,840 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 01:28:46,842 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 01:32:47,678 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 01:32:47,681 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 01:36:48,849 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 01:36:48,850 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 01:40:49,752 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 01:40:49,756 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 01:44:50,882 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 01:44:50,884 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 01:48:51,806 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 01:48:51,810 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 01:52:52,368 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 01:52:52,371 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 01:56:52,922 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 01:56:52,924 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 02:00:53,732 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 02:00:53,735 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 02:04:54,272 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 02:04:54,276 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 02:08:54,801 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 02:08:54,805 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 02:12:55,352 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 02:12:55,355 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 02:16:56,038 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 02:16:56,040 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 02:23:30,071 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 02:23:30,076 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 02:27:30,786 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 02:27:30,787 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 02:31:31,505 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 02:31:31,507 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 02:35:32,231 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 02:35:32,234 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 02:39:33,143 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 02:39:33,146 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 02:43:34,020 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 02:43:34,022 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 02:47:34,943 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 02:47:34,958 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 03:03:11,992 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 03:03:11,996 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 03:13:24,313 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 03:13:24,317 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 03:17:24,907 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 03:17:24,909 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 03:21:25,513 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 03:21:25,516 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 03:25:26,191 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 03:25:26,193 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 03:29:27,195 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 03:29:27,197 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 03:33:28,221 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 03:33:28,223 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 03:37:29,007 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 03:37:29,012 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 03:41:29,647 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 03:41:29,651 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 03:45:30,302 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 03:45:30,304 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 03:49:30,976 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 03:49:30,980 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 03:53:31,760 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 03:53:31,763 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 03:57:32,341 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 03:57:32,349 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 04:01:33,136 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 04:01:33,140 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 20:09:03,963 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 20:09:03,970 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 20:13:04,837 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 20:13:04,839 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 20:17:05,869 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 20:17:05,871 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 20:21:06,908 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 20:21:06,909 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 20:25:08,001 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 20:25:08,002 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 20:29:08,421 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 20:29:08,423 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 20:33:09,577 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 20:33:09,578 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 20:37:10,447 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-01 20:37:10,449 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-01 20:41:10,674 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development

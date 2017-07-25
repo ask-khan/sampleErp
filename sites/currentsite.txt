@@ -1,1 +1,1 @@
-site1.local
+site.local-development

@@ -1,6 +1,6 @@
 
 /*
- *	/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/erpnext/erpnext/public/css/erpnext.css
+ *	/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/erpnext/erpnext/public/css/erpnext.css
  */
 .erpnext-footer {
   margin: 11px auto;
@@ -17,9 +17,9 @@
   margin: -10px auto;
 }
 .erpnext-icon {
-  width: 24px;
-  margin-right: 0px;
-  margin-top: -3px;
+  width: 24px !important;
+  margin-right: 0px !important;
+  margin-top: -3px !important;
 }
 .dashboard-list-item {
   background-color: inherit;

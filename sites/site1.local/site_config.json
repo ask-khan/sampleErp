@@ -1,6 +1,7 @@
 {
  "db_name": "1bd3e0294da19198", 
- "db_password": "BcuPlI9PcNKXFOyM", 
+ "db_password": "BcuPlI9PcNKXFOyM",
+ "developer_mode": 1,
  "limits": {
   "space_usage": {
    "backup_size": 0.0, 

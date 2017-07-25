@@ -2,3 +2,5 @@ frappe
 erpnext
 ni_dark_theme
 nilighttheme
+sample_application
+sp_theme

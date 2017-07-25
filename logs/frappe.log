@@ -1,877 +1,480 @@
-[DEBUG] 2017-03-30 19:13:28,058 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2017-06-05 01:26:32,395 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: site1.local
-Queued events for site site1.local
-[ERROR] 2017-03-30 19:14:33,831 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py:
-Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Request Error
+Exception in Enqueue Events for Site site1.local
 Traceback (most recent call last):
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py", line 56, in application
-    response = frappe.handler.handle()
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
-    execute_cmd(cmd)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 42, in execute_cmd
-    ret = frappe.call(method, **frappe.form_dict)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/__init__.py", line 907, in call
-    return fn(*args, **newargs)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 33, in get_help_content
-    return HelpDatabase().get_content(path)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 98, in get_content
-    result = self.db.sql(query.format(path=path))
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/database.py", line 149, in sql
-    self._cursor.execute(query)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
-    self.errorhandler(self, exc, value)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
-    raise errorclass, errorvalue
-ProgrammingError: (1146, "Table '1bd3e0294da19198.help' doesn't exist")
-[ERROR] 2017-03-30 19:14:33,831 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py:
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-05 01:30:33,188 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-05 01:30:33,190 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Request Error
+Exception in Enqueue Events for Site site1.local
 Traceback (most recent call last):
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py", line 56, in application
-    response = frappe.handler.handle()
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
-    execute_cmd(cmd)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 42, in execute_cmd
-    ret = frappe.call(method, **frappe.form_dict)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/__init__.py", line 907, in call
-    return fn(*args, **newargs)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 33, in get_help_content
-    return HelpDatabase().get_content(path)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 98, in get_content
-    result = self.db.sql(query.format(path=path))
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/database.py", line 149, in sql
-    self._cursor.execute(query)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
-    self.errorhandler(self, exc, value)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
-    raise errorclass, errorvalue
-ProgrammingError: (1146, "Table '1bd3e0294da19198.help' doesn't exist")
-[ERROR] 2017-03-30 19:14:33,831 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py:
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-05 01:34:33,971 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-05 01:34:33,973 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Request Error
+Exception in Enqueue Events for Site site1.local
 Traceback (most recent call last):
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py", line 56, in application
-    response = frappe.handler.handle()
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
-    execute_cmd(cmd)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 42, in execute_cmd
-    ret = frappe.call(method, **frappe.form_dict)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/__init__.py", line 907, in call
-    return fn(*args, **newargs)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 33, in get_help_content
-    return HelpDatabase().get_content(path)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 98, in get_content
-    result = self.db.sql(query.format(path=path))
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/database.py", line 149, in sql
-    self._cursor.execute(query)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
-    self.errorhandler(self, exc, value)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
-    raise errorclass, errorvalue
-ProgrammingError: (1146, "Table '1bd3e0294da19198.help' doesn't exist")
-[ERROR] 2017-03-30 19:14:33,831 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py:
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-05 01:38:34,622 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-05 01:38:34,624 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Request Error
+Exception in Enqueue Events for Site site1.local
 Traceback (most recent call last):
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py", line 56, in application
-    response = frappe.handler.handle()
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
-    execute_cmd(cmd)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 42, in execute_cmd
-    ret = frappe.call(method, **frappe.form_dict)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/__init__.py", line 907, in call
-    return fn(*args, **newargs)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 33, in get_help_content
-    return HelpDatabase().get_content(path)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 98, in get_content
-    result = self.db.sql(query.format(path=path))
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/database.py", line 149, in sql
-    self._cursor.execute(query)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
-    self.errorhandler(self, exc, value)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
-    raise errorclass, errorvalue
-ProgrammingError: (1146, "Table '1bd3e0294da19198.help' doesn't exist")
-[ERROR] 2017-03-30 19:14:33,831 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py:
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-05 01:42:35,433 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-05 01:42:35,435 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Request Error
+Exception in Enqueue Events for Site site1.local
 Traceback (most recent call last):
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py", line 56, in application
-    response = frappe.handler.handle()
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
-    execute_cmd(cmd)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 42, in execute_cmd
-    ret = frappe.call(method, **frappe.form_dict)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/__init__.py", line 907, in call
-    return fn(*args, **newargs)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 33, in get_help_content
-    return HelpDatabase().get_content(path)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 98, in get_content
-    result = self.db.sql(query.format(path=path))
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/database.py", line 149, in sql
-    self._cursor.execute(query)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
-    self.errorhandler(self, exc, value)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
-    raise errorclass, errorvalue
-ProgrammingError: (1146, "Table '1bd3e0294da19198.help' doesn't exist")
-[ERROR] 2017-03-30 19:14:33,831 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py:
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-05 01:46:35,631 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-05 01:46:35,633 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Request Error
+Exception in Enqueue Events for Site site1.local
 Traceback (most recent call last):
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py", line 56, in application
-    response = frappe.handler.handle()
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
-    execute_cmd(cmd)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 42, in execute_cmd
-    ret = frappe.call(method, **frappe.form_dict)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/__init__.py", line 907, in call
-    return fn(*args, **newargs)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 33, in get_help_content
-    return HelpDatabase().get_content(path)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 98, in get_content
-    result = self.db.sql(query.format(path=path))
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/database.py", line 149, in sql
-    self._cursor.execute(query)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
-    self.errorhandler(self, exc, value)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
-    raise errorclass, errorvalue
-ProgrammingError: (1146, "Table '1bd3e0294da19198.help' doesn't exist")
-[ERROR] 2017-03-30 19:14:33,831 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py:
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-05 01:50:36,341 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-05 01:50:36,344 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Request Error
+Exception in Enqueue Events for Site site1.local
 Traceback (most recent call last):
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py", line 56, in application
-    response = frappe.handler.handle()
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
-    execute_cmd(cmd)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 42, in execute_cmd
-    ret = frappe.call(method, **frappe.form_dict)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/__init__.py", line 907, in call
-    return fn(*args, **newargs)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 33, in get_help_content
-    return HelpDatabase().get_content(path)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 98, in get_content
-    result = self.db.sql(query.format(path=path))
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/database.py", line 149, in sql
-    self._cursor.execute(query)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
-    self.errorhandler(self, exc, value)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
-    raise errorclass, errorvalue
-ProgrammingError: (1146, "Table '1bd3e0294da19198.help' doesn't exist")
-[ERROR] 2017-03-30 19:14:33,831 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py:
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-05 02:22:15,928 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-05 02:22:15,934 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Request Error
+Exception in Enqueue Events for Site site1.local
 Traceback (most recent call last):
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py", line 56, in application
-    response = frappe.handler.handle()
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
-    execute_cmd(cmd)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 42, in execute_cmd
-    ret = frappe.call(method, **frappe.form_dict)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/__init__.py", line 907, in call
-    return fn(*args, **newargs)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 33, in get_help_content
-    return HelpDatabase().get_content(path)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 98, in get_content
-    result = self.db.sql(query.format(path=path))
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/database.py", line 149, in sql
-    self._cursor.execute(query)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
-    self.errorhandler(self, exc, value)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
-    raise errorclass, errorvalue
-ProgrammingError: (1146, "Table '1bd3e0294da19198.help' doesn't exist")
-[ERROR] 2017-03-30 19:14:33,832 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py:
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-05 02:26:16,528 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-05 02:26:16,530 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Request Error
+Exception in Enqueue Events for Site site1.local
 Traceback (most recent call last):
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py", line 56, in application
-    response = frappe.handler.handle()
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
-    execute_cmd(cmd)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 42, in execute_cmd
-    ret = frappe.call(method, **frappe.form_dict)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/__init__.py", line 907, in call
-    return fn(*args, **newargs)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 33, in get_help_content
-    return HelpDatabase().get_content(path)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 98, in get_content
-    result = self.db.sql(query.format(path=path))
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/database.py", line 149, in sql
-    self._cursor.execute(query)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
-    self.errorhandler(self, exc, value)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
-    raise errorclass, errorvalue
-ProgrammingError: (1146, "Table '1bd3e0294da19198.help' doesn't exist")
-[ERROR] 2017-03-30 19:14:33,832 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py:
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-05 02:40:45,265 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-05 02:40:45,272 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Request Error
+Exception in Enqueue Events for Site site1.local
 Traceback (most recent call last):
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py", line 56, in application
-    response = frappe.handler.handle()
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
-    execute_cmd(cmd)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 42, in execute_cmd
-    ret = frappe.call(method, **frappe.form_dict)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/__init__.py", line 907, in call
-    return fn(*args, **newargs)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 33, in get_help_content
-    return HelpDatabase().get_content(path)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 98, in get_content
-    result = self.db.sql(query.format(path=path))
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/database.py", line 149, in sql
-    self._cursor.execute(query)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
-    self.errorhandler(self, exc, value)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
-    raise errorclass, errorvalue
-ProgrammingError: (1146, "Table '1bd3e0294da19198.help' doesn't exist")
-[ERROR] 2017-03-30 19:14:33,832 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py:
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-05 02:44:45,894 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-05 02:44:45,896 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Request Error
+Exception in Enqueue Events for Site site1.local
 Traceback (most recent call last):
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py", line 56, in application
-    response = frappe.handler.handle()
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
-    execute_cmd(cmd)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 42, in execute_cmd
-    ret = frappe.call(method, **frappe.form_dict)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/__init__.py", line 907, in call
-    return fn(*args, **newargs)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 33, in get_help_content
-    return HelpDatabase().get_content(path)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 98, in get_content
-    result = self.db.sql(query.format(path=path))
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/database.py", line 149, in sql
-    self._cursor.execute(query)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
-    self.errorhandler(self, exc, value)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
-    raise errorclass, errorvalue
-ProgrammingError: (1146, "Table '1bd3e0294da19198.help' doesn't exist")
-[ERROR] 2017-03-30 19:14:33,832 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py:
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-05 02:48:46,588 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-05 02:48:46,598 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Request Error
+Exception in Enqueue Events for Site site1.local
 Traceback (most recent call last):
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py", line 56, in application
-    response = frappe.handler.handle()
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
-    execute_cmd(cmd)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 42, in execute_cmd
-    ret = frappe.call(method, **frappe.form_dict)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/__init__.py", line 907, in call
-    return fn(*args, **newargs)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 33, in get_help_content
-    return HelpDatabase().get_content(path)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 98, in get_content
-    result = self.db.sql(query.format(path=path))
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/database.py", line 149, in sql
-    self._cursor.execute(query)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
-    self.errorhandler(self, exc, value)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
-    raise errorclass, errorvalue
-ProgrammingError: (1146, "Table '1bd3e0294da19198.help' doesn't exist")
-[ERROR] 2017-03-30 19:14:33,832 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py:
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-05 02:52:47,188 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-05 02:52:47,190 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Request Error
+Exception in Enqueue Events for Site site1.local
 Traceback (most recent call last):
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py", line 56, in application
-    response = frappe.handler.handle()
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
-    execute_cmd(cmd)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 42, in execute_cmd
-    ret = frappe.call(method, **frappe.form_dict)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/__init__.py", line 907, in call
-    return fn(*args, **newargs)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 33, in get_help_content
-    return HelpDatabase().get_content(path)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 98, in get_content
-    result = self.db.sql(query.format(path=path))
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/database.py", line 149, in sql
-    self._cursor.execute(query)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
-    self.errorhandler(self, exc, value)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
-    raise errorclass, errorvalue
-ProgrammingError: (1146, "Table '1bd3e0294da19198.help' doesn't exist")
-[ERROR] 2017-03-30 19:14:33,832 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py:
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-05 02:56:47,775 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-05 02:56:47,777 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Request Error
+Exception in Enqueue Events for Site site1.local
 Traceback (most recent call last):
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py", line 56, in application
-    response = frappe.handler.handle()
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
-    execute_cmd(cmd)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 42, in execute_cmd
-    ret = frappe.call(method, **frappe.form_dict)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/__init__.py", line 907, in call
-    return fn(*args, **newargs)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 33, in get_help_content
-    return HelpDatabase().get_content(path)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 98, in get_content
-    result = self.db.sql(query.format(path=path))
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/database.py", line 149, in sql
-    self._cursor.execute(query)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
-    self.errorhandler(self, exc, value)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
-    raise errorclass, errorvalue
-ProgrammingError: (1146, "Table '1bd3e0294da19198.help' doesn't exist")
-[ERROR] 2017-03-30 19:14:33,832 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py:
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-05 03:00:48,585 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-05 03:00:48,587 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Request Error
+Exception in Enqueue Events for Site site1.local
 Traceback (most recent call last):
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py", line 56, in application
-    response = frappe.handler.handle()
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
-    execute_cmd(cmd)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 42, in execute_cmd
-    ret = frappe.call(method, **frappe.form_dict)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/__init__.py", line 907, in call
-    return fn(*args, **newargs)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 33, in get_help_content
-    return HelpDatabase().get_content(path)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 98, in get_content
-    result = self.db.sql(query.format(path=path))
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/database.py", line 149, in sql
-    self._cursor.execute(query)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
-    self.errorhandler(self, exc, value)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
-    raise errorclass, errorvalue
-ProgrammingError: (1146, "Table '1bd3e0294da19198.help' doesn't exist")
-[ERROR] 2017-03-30 19:14:33,832 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py:
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-05 03:04:49,398 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-05 03:04:49,401 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Request Error
+Exception in Enqueue Events for Site site1.local
 Traceback (most recent call last):
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py", line 56, in application
-    response = frappe.handler.handle()
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
-    execute_cmd(cmd)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 42, in execute_cmd
-    ret = frappe.call(method, **frappe.form_dict)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/__init__.py", line 907, in call
-    return fn(*args, **newargs)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 33, in get_help_content
-    return HelpDatabase().get_content(path)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 98, in get_content
-    result = self.db.sql(query.format(path=path))
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/database.py", line 149, in sql
-    self._cursor.execute(query)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
-    self.errorhandler(self, exc, value)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
-    raise errorclass, errorvalue
-ProgrammingError: (1146, "Table '1bd3e0294da19198.help' doesn't exist")
-[ERROR] 2017-03-30 19:14:33,832 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py:
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-05 03:08:50,156 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-05 03:08:50,158 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Request Error
+Exception in Enqueue Events for Site site1.local
 Traceback (most recent call last):
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py", line 56, in application
-    response = frappe.handler.handle()
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
-    execute_cmd(cmd)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 42, in execute_cmd
-    ret = frappe.call(method, **frappe.form_dict)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/__init__.py", line 907, in call
-    return fn(*args, **newargs)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 33, in get_help_content
-    return HelpDatabase().get_content(path)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 98, in get_content
-    result = self.db.sql(query.format(path=path))
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/database.py", line 149, in sql
-    self._cursor.execute(query)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
-    self.errorhandler(self, exc, value)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
-    raise errorclass, errorvalue
-ProgrammingError: (1146, "Table '1bd3e0294da19198.help' doesn't exist")
-[ERROR] 2017-03-30 19:14:33,832 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py:
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-05 03:12:50,880 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-05 03:12:50,882 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Request Error
+Exception in Enqueue Events for Site site1.local
 Traceback (most recent call last):
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py", line 56, in application
-    response = frappe.handler.handle()
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
-    execute_cmd(cmd)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 42, in execute_cmd
-    ret = frappe.call(method, **frappe.form_dict)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/__init__.py", line 907, in call
-    return fn(*args, **newargs)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 33, in get_help_content
-    return HelpDatabase().get_content(path)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 98, in get_content
-    result = self.db.sql(query.format(path=path))
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/database.py", line 149, in sql
-    self._cursor.execute(query)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
-    self.errorhandler(self, exc, value)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
-    raise errorclass, errorvalue
-ProgrammingError: (1146, "Table '1bd3e0294da19198.help' doesn't exist")
-[ERROR] 2017-03-30 19:14:33,832 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py:
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-05 03:18:54,658 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-05 03:18:54,665 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Request Error
+Exception in Enqueue Events for Site site1.local
 Traceback (most recent call last):
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py", line 56, in application
-    response = frappe.handler.handle()
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
-    execute_cmd(cmd)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 42, in execute_cmd
-    ret = frappe.call(method, **frappe.form_dict)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/__init__.py", line 907, in call
-    return fn(*args, **newargs)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 33, in get_help_content
-    return HelpDatabase().get_content(path)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 98, in get_content
-    result = self.db.sql(query.format(path=path))
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/database.py", line 149, in sql
-    self._cursor.execute(query)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
-    self.errorhandler(self, exc, value)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
-    raise errorclass, errorvalue
-ProgrammingError: (1146, "Table '1bd3e0294da19198.help' doesn't exist")
-[ERROR] 2017-03-30 19:14:33,832 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py:
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-05 03:23:28,510 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-05 03:23:28,517 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Site: site1.local
-Form Dict: {
- "cmd": "frappe.utils.help.get_help_content", 
- "path": "/documentation/index"
-}
-Request Error
+Exception in Enqueue Events for Site site1.local
 Traceback (most recent call last):
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/app.py", line 56, in application
-    response = frappe.handler.handle()
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
-    execute_cmd(cmd)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/handler.py", line 42, in execute_cmd
-    ret = frappe.call(method, **frappe.form_dict)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/__init__.py", line 907, in call
-    return fn(*args, **newargs)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 33, in get_help_content
-    return HelpDatabase().get_content(path)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/help.py", line 98, in get_content
-    result = self.db.sql(query.format(path=path))
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/database.py", line 149, in sql
-    self._cursor.execute(query)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
-    self.errorhandler(self, exc, value)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
-    raise errorclass, errorvalue
-ProgrammingError: (1146, "Table '1bd3e0294da19198.help' doesn't exist")
-[ERROR] 2017-03-30 19:14:33,998 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/error.py:
-Could not take error snapshot: 'connection'
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
+[DEBUG] 2017-06-05 03:31:17,043 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site.local-development
+Queued events for site site.local-development
+[ERROR] 2017-06-05 03:31:17,047 | /Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Exception in Enqueue Events for Site site1.local
 Traceback (most recent call last):
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
-    snapshot = get_snapshot(exception)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/error.py", line 81, in get_snapshot
-    call = inspect.formatargvalues(args, varargs, varkw, locals, formatvalue=lambda value: '={}'.format(pydoc.text.repr(value)))
-  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/inspect.py", line 888, in formatargvalues
-    specs.append(strseq(args[i], convert, join))
-  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/inspect.py", line 843, in strseq
-    return convert(object)
-  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/inspect.py", line 885, in convert
-    return formatarg(name) + formatvalue(locals[name])
-KeyError: 'connection'
-[ERROR] 2017-03-30 19:14:34,001 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/error.py:
-Could not take error snapshot: 'connection'
-Traceback (most recent call last):
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
-    snapshot = get_snapshot(exception)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/error.py", line 81, in get_snapshot
-    call = inspect.formatargvalues(args, varargs, varkw, locals, formatvalue=lambda value: '={}'.format(pydoc.text.repr(value)))
-  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/inspect.py", line 888, in formatargvalues
-    specs.append(strseq(args[i], convert, join))
-  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/inspect.py", line 843, in strseq
-    return convert(object)
-  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/inspect.py", line 885, in convert
-    return formatarg(name) + formatvalue(locals[name])
-KeyError: 'connection'
-[ERROR] 2017-03-30 19:14:34,004 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/error.py:
-Could not take error snapshot: 'connection'
-Traceback (most recent call last):
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
-    snapshot = get_snapshot(exception)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/error.py", line 81, in get_snapshot
-    call = inspect.formatargvalues(args, varargs, varkw, locals, formatvalue=lambda value: '={}'.format(pydoc.text.repr(value)))
-  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/inspect.py", line 888, in formatargvalues
-    specs.append(strseq(args[i], convert, join))
-  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/inspect.py", line 843, in strseq
-    return convert(object)
-  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/inspect.py", line 885, in convert
-    return formatarg(name) + formatvalue(locals[name])
-KeyError: 'connection'
-[ERROR] 2017-03-30 19:14:34,007 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/error.py:
-Could not take error snapshot: 'connection'
-Traceback (most recent call last):
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
-    snapshot = get_snapshot(exception)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/error.py", line 81, in get_snapshot
-    call = inspect.formatargvalues(args, varargs, varkw, locals, formatvalue=lambda value: '={}'.format(pydoc.text.repr(value)))
-  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/inspect.py", line 888, in formatargvalues
-    specs.append(strseq(args[i], convert, join))
-  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/inspect.py", line 843, in strseq
-    return convert(object)
-  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/inspect.py", line 885, in convert
-    return formatarg(name) + formatvalue(locals[name])
-KeyError: 'connection'
-[ERROR] 2017-03-30 19:14:34,009 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/error.py:
-Could not take error snapshot: 'connection'
-Traceback (most recent call last):
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
-    snapshot = get_snapshot(exception)
-  File "/Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/error.py", line 81, in get_snapshot
-    call = inspect.formatargvalues(args, varargs, varkw, locals, formatvalue=lambda value: '={}'.format(pydoc.text.repr(value)))
-  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/inspect.py", line 888, in formatargvalues
-    specs.append(strseq(args[i], convert, join))
-  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/inspect.py", line 843, in strseq
-    return convert(object)
-  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/inspect.py", line 885, in convert
-    return formatarg(name) + formatvalue(locals[name])
-KeyError: 'connection'
-[DEBUG] 2017-03-30 19:17:28,667 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 14:44:50,503 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 14:48:51,183 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 14:52:51,960 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 14:56:52,695 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 15:00:53,395 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 15:04:54,110 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 15:08:54,809 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 15:12:55,561 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 15:16:56,321 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 15:20:56,345 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 15:24:57,087 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 15:28:57,767 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 15:32:57,812 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 15:36:57,995 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 15:40:58,112 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 15:44:58,329 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 15:48:58,469 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 15:52:59,461 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 15:57:00,153 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 16:01:00,869 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 16:05:01,615 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 16:09:02,340 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 16:13:03,092 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 16:17:03,870 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 16:21:04,570 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 16:25:05,213 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 16:45:47,547 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 16:49:48,273 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 16:53:48,973 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 16:57:49,266 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 17:01:49,460 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 17:05:49,845 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 17:09:50,191 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 17:13:50,303 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 17:17:51,032 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 17:21:51,694 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
-[DEBUG] 2017-03-31 17:25:52,411 | /Users/saqibrupani/Documents/pythoncode/ERPNext8/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: site1.local
-Queued events for site site1.local
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 63, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 207, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 554, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 107, in sql
+    self.connect()
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/apps/frappe/frappe/database.py", line 53, in connect
+    use_unicode=True, charset='utf8mb4')
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/user/Documents/ERPNext-22-05-2017/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user '1bd3e0294da19198'@'localhost' (using password: YES)")
+
